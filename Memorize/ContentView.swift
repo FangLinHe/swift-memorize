@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 10) {
+        VStack {
             ForEach(0..<6) { index in
                 CardRowView(rowNumber: index)
             }
@@ -38,7 +38,7 @@ struct CardView: View {
 struct CardRowView: View {
     var rowNumber: Int
     var body: some View {
-        HStack(spacing: 10) {
+        HStack {
             ForEach(0..<4) { index in
                 CardView(isFaceUp: (rowNumber + index) % 2 == 0)
             }
