@@ -11,6 +11,7 @@ struct ContentView: View {
     var viewModel: EmojiMemoryGame
     
     var body: some View {
+        let fontSize = viewModel.cards.count >= 10 ? Font.title3 : Font.largeTitle
         HStack {
             ForEach(viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
@@ -21,7 +22,7 @@ struct ContentView: View {
         }
         .foregroundColor(.orange)
         .padding()
-        .font(Font.largeTitle)
+        .font(fontSize)
     }
 }
 
