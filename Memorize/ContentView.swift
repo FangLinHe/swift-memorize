@@ -17,6 +17,7 @@ struct ContentView: View {
                     viewModel.choose(card: card)
                 }
             }
+            .aspectRatio(2 / 3, contentMode: .fit)
         }
         .foregroundColor(.orange)
         .padding()
